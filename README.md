@@ -85,9 +85,10 @@ cd tcd-utils-20120115
 make
 sudo make install
 ```
-#### STRUCTURE DOSSIER
+#### NETTOYAGE & STRUCTURE DOSSIER
 ```
 cd
+rm *.*z*
 mkdir data
 cd data
 mkdir maregraphie
