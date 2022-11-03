@@ -85,6 +85,10 @@ cd tcd-utils-20120115
 make
 sudo make install
 ```
+### R
+```
+sudo apt install r-base
+```
 #### NETTOYAGE & STRUCTURE DOSSIER
 ```
 cd
