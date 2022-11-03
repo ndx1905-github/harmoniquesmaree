@@ -80,7 +80,7 @@ sudo make install
 cd
 wget https://flaterco.com/files/xtide/tcd-utils-20120115.tar.bz2
 tar -xf tcd-utils-20120115.tar.bz2
-cd tcd-utils-2012011
+cd tcd-utils-20120115
 ./configure
 make
 sudo make install
