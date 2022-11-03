@@ -71,8 +71,7 @@ cd
 wget https://flaterco.com/files/xtide/harmbase2-20220109.tar.xz
 tar -xf harmbase2-20220109.tar.xz
 cd harmbase2-20220109
-PGPFX=/usr/local/pgsql  # Prefix for PostgreSQL
-./configure CPPFLAGS=-I${PGPFX}/include LDFLAGS=-L${PGPFX}/lib 
+./configure CPPFLAGS=-I/usr/include/postgresql 
 make
 sudo make install
 ```
