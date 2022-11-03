@@ -1,5 +1,5 @@
 ### harmoniques maree
-Créer les fichiers de prédiction de marée à partir des hauteurs d'eau - IMPROPRE A LA NAVIGATION
+Créer les fichiers de prédiction de marée à partir des hauteurs d'eau (pour info uniquement, prédictions impropres à la navigation). Il s'agit d'une mise bout à bout des codes de David Flater (https://flaterco.com/xtide/index.html) et Luke Miller (https://github.com/millerlp/Tide_calculator)
 
 
 Preparer l'instance en suivant le fichier INSTALL.md
