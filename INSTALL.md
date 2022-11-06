@@ -64,17 +64,6 @@ cd libdstr-1.0
 make
 sudo make install
 ```
-
-#### HARMBASE2
-```
-cd
-wget https://flaterco.com/files/xtide/harmbase2-20220109.tar.xz
-tar -xf harmbase2-20220109.tar.xz
-cd harmbase2-20220109
-./configure CPPFLAGS=-I/usr/include/postgresql 
-make
-sudo make install
-```
 #### TCD-UTILS
 ```
 cd
@@ -82,6 +71,16 @@ wget https://flaterco.com/files/xtide/tcd-utils-20120115.tar.bz2
 tar -xf tcd-utils-20120115.tar.bz2
 cd tcd-utils-20120115
 ./configure
+make
+sudo make install
+```
+#### HARMBASE2
+```
+cd
+wget https://flaterco.com/files/xtide/harmbase2-20220109.tar.xz
+tar -xf harmbase2-20220109.tar.xz
+cd harmbase2-20220109
+./configure CPPFLAGS=-I/usr/include/postgresql 
 make
 sudo make install
 ```
