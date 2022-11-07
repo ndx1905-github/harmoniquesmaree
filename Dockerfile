@@ -1,13 +1,20 @@
 FROM gcc:10-buster
 
-RUN	apt-get update \
-    && apt-get install -y -f r-base; exit 0
+RUN apt-get update \
+	&& apt-get install -y -f r-base; exit 0
 
 RUN apt remove -y gfortran
 
 RUN apt-get install -y octave
 
 RUN apt-get install -y postgresql postgresql-server-dev-all libecpg-dev #pour avoir sqlca.h
+
+RUN wget https://flaterco.com/files/xtide/libtcd-2.2.7-r3.tar.xz \
+	&& tar -xf libtcd-2.2.7-r3.tar.xz \
+	&& cd libtcd-2.2.7 \
+	&& ./configure \
+	&& make \
+	&& make install
 
 RUN wget https://flaterco.com/files/xtide/congen-1.7-r2.tar.xz \
 	&& tar -xf congen-1.7-r2.tar.xz \
@@ -16,7 +23,7 @@ RUN wget https://flaterco.com/files/xtide/congen-1.7-r2.tar.xz \
 	&& make \
 	&& make install
 
-RUN	wget https://flaterco.com/files/xtide/tcd-utils-20120115.tar.bz2 \
+RUN wget https://flaterco.com/files/xtide/tcd-utils-20120115.tar.bz2 \
 	&& tar -xf tcd-utils-20120115.tar.bz2 \
 	&& cd tcd-utils-20120115 \
 	&& ./configure \
@@ -44,7 +51,7 @@ RUN wget https://flaterco.com/files/xtide/harmbase2-20220109.tar.xz \
 	&& make \
 	&& make install
 
-RUN	rm *.*z* \
+RUN rm *.*z* \
 	&& mkdir data \
 	&& cd data \
 	&& mkdir maregraphie \
