@@ -5,9 +5,7 @@ RUN apt-get update \
 
 RUN apt remove -y gfortran
 
-RUN apt-get install -y octave
-
-RUN apt-get install -y postgresql postgresql-server-dev-all libecpg-dev #pour avoir sqlca.h
+RUN apt-get install -y octave gawk postgresql postgresql-server-dev-all libecpg-dev #pour avoir sqlca.h
 
 RUN wget https://flaterco.com/files/xtide/libtcd-2.2.7-r3.tar.xz \
 	&& tar -xf libtcd-2.2.7-r3.tar.xz \
@@ -56,3 +54,7 @@ RUN rm *.*z* \
 	&& cd data \
 	&& mkdir maregraphie \
 	&& mkdir arduino_libraries
+
+COPY read_harmonicsfile.R tide_harmonics_library_generator_multi.R tide_harmonics_parse.R wl2tide.sh /
+
+ENTRYPOINT ["/wl2tide.sh"]
