@@ -5,14 +5,7 @@ RUN apt-get update \
 
 RUN apt remove -y gfortran
 
-RUN apt-get install -y octave gawk postgresql postgresql-server-dev-all libecpg-dev #pour avoir sqlca.h
-
-RUN wget https://flaterco.com/files/xtide/libtcd-2.2.7-r3.tar.xz \
-	&& tar -xf libtcd-2.2.7-r3.tar.xz \
-	&& cd libtcd-2.2.7 \
-	&& ./configure \
-	&& make \
-	&& make install
+RUN apt-get install -y octave gawk postgresql postgresql-server-dev-all libecpg-dev libtcd0 libtcd-dev #pour avoir sqlca.h
 
 RUN wget https://flaterco.com/files/xtide/congen-1.7-r2.tar.xz \
 	&& tar -xf congen-1.7-r2.tar.xz \
